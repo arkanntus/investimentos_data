@@ -57,6 +57,24 @@ def cria_tabelas(conexao):
 
 ###########################################################################
 
+# def cria_view_ativo_sintetico(conexao, tabela):
+#     sql = """ CREATE VIEW xxxxx IF NOT EXISTS (
+#                          id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL,
+#                          cod_cvm INTEGER REFERENCES Company (cod_cvm),
+#                          id_modelo INTEGER REFERENCES ModeloPlanoContas (id),
+#                          data_referencia DATE NOT NULL,
+#                          inicio_exercicio DATE NOT NULL,
+#                          fim_exercicio DATE NOT NULL,
+#                          conta VARCHAR NOT NULL,
+#                          descricao VARCHAR NOT NULL,
+#                          valor INTEGER NOT NULL
+#                  ); """
+#     cursor = conexao.cursor()
+#     cursor.execute(sql)
+#     cursor.close()
+
+###########################################################################
+
 def adiciona_dados_demonstracao(conexao, tabela, dadosTabela):
     try:
         numColunas = len(dadosTabela)
