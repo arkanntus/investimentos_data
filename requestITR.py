@@ -62,9 +62,9 @@ def linksCVM(file):
 ###########################################################################
 
 def main():
-    data = "08/11/2019"
+    data = "24/04/2020"
     arquivo = "file.xml"
-    tipoDocumento = "TODOS"
+    tipoDocumento = "ITR"
     
     # requestXML(data, arquivo, tipoDocumento)
     # print("Terminado requestXML")
@@ -72,8 +72,8 @@ def main():
     links = linksCVM(arquivo)
     print("Terminado linksCVM", len(links))
 
-    # for k, v in links.items():
-    #     print(k, v)
+    for k, v in links.items():
+        print(k, v)
 
     downloadZIP(links)
     print("Terminado downloadZIP")
