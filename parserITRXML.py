@@ -99,10 +99,15 @@ def obtem_info_financeiras(path):
 ###########################################################################
 
 def main():
-    #path = ".\\Downloads\\2019 09 30 ITR COD_CVM 20800\\" #Tegma
+    # path = ".\\Downloads\\2019 09 30 ITR COD_CVM 20800\\" #Tegma
     # path = ".\\Downloads\\2019 09 30 ITR COD_CVM 19879\\" #LIGT3
     # path = ".\\Downloads\\2019 12 31 DFP COD_CVM 20257\\" #Taesa
-    path = ".\\Downloads\\2020 03 31 ITR COD_CVM 21431\\" #Hypera
+    path = ".\\Downloads\\COD_CVM 21431\\2019 12 31 DFP\\" #Hypera
+    path = ".\\Downloads\\COD_CVM 21431\\2020 03 31 ITR\\" #Hypera
+    path = ".\\Downloads\\COD_CVM 21431\\2019 09 30 ITR\\" #Hypera
+    path = ".\\Downloads\\COD_CVM 21431\\2019 06 30 ITR\\" #Hypera
+    path = ".\\Downloads\\COD_CVM 21431\\2019 03 31 ITR\\" #Hypera
+
     obtem_periodos(path)
     obtem_info_financeiras(path)
 
