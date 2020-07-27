@@ -10,21 +10,13 @@ from datetime import datetime
 ###########################################################################
 
 def requestXML(_data, arquivo, tipoDocumento):
-    data = {
-        "txtLogin" : "397dwlama",
-        "txtSenha" : "185DF128", 
-        "txtData" : _data, 
-        "txtHora" : "00:00", 
-        "txtAssuntoIPE": "SIM",
-        "txtDocumento" : tipoDocumento
-    }
 
-    url = 'http://seguro.bmfbovespa.com.br/rad/download/SolicitaDownload.asp'
+    # url = 'http://seguro.bmfbovespa.com.br/rad/download/SolicitaDownload.asp'
 
-    r = requests.post( url = url, data = data )
+    # r = requests.post( url = url, data = data )
 
-    with open(arquivo, 'wb') as file:
-        file.write(r.content)
+    # with open(arquivo, 'wb') as file:
+    #     file.write(r.content)
 
 ###########################################################################
 

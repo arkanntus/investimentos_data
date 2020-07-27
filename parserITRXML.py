@@ -63,9 +63,9 @@ def obtem_info_financeiras(path):
         planoConta = item.find('PlanoConta')
         versaoPlanoConta = planoConta.find('VersaoPlanoConta')
         codigoTipoInformacaoFinanceira = versaoPlanoConta.find('CodigoTipoInformacaoFinanceira') #Domínio 48 {1: Individual, 2: Consolidado, 3: Individual e Consolidado}
-        codigoTipoDemonstracaoFinanceira = versaoPlanoConta.find('CodigoTipoDemonstracaoFinanceira') #Domínio 50 {2: BPA, 3: BPP; 4: DRE, 5: DRA, 6: DFC-MD, 7: DFC-MI...}
+        codigoTipoDemonstracaoFinanceira = versaoPlanoConta.find('CodigoTipoDemonstracaoFinanceira') #Domínio 50 {2: BPA, 3: BPP; 4: DRE, 5: DRA, 6: DFC-MD, 7: DFC-MI, 8: DMPL, 9: DVA}
 
-        if codigoTipoInformacaoFinanceira.text == '2' and codigoTipoDemonstracaoFinanceira.text == '4':
+        if codigoTipoInformacaoFinanceira.text == '2' and codigoTipoDemonstracaoFinanceira.text == '2':
             # if index == limite:
             #     break
 
@@ -102,11 +102,11 @@ def main():
     # path = ".\\Downloads\\2019 09 30 ITR COD_CVM 20800\\" #Tegma
     # path = ".\\Downloads\\2019 09 30 ITR COD_CVM 19879\\" #LIGT3
     # path = ".\\Downloads\\2019 12 31 DFP COD_CVM 20257\\" #Taesa
-    path = ".\\Downloads\\COD_CVM 21431\\2019 12 31 DFP\\" #Hypera
-    path = ".\\Downloads\\COD_CVM 21431\\2020 03 31 ITR\\" #Hypera
-    path = ".\\Downloads\\COD_CVM 21431\\2019 09 30 ITR\\" #Hypera
+    # path = ".\\Downloads\\COD_CVM 21431\\2019 03 31 ITR\\" #Hypera
     path = ".\\Downloads\\COD_CVM 21431\\2019 06 30 ITR\\" #Hypera
-    path = ".\\Downloads\\COD_CVM 21431\\2019 03 31 ITR\\" #Hypera
+    # path = ".\\Downloads\\COD_CVM 21431\\2019 09 30 ITR\\" #Hypera
+    # path = ".\\Downloads\\COD_CVM 21431\\2019 12 31 DFP\\" #Hypera
+    # path = ".\\Downloads\\COD_CVM 21431\\2020 03 31 ITR\\" #Hypera
 
     obtem_periodos(path)
     obtem_info_financeiras(path)
